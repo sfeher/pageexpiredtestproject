@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+       <action>
+            <actionName>run</actionName>
+            <goals>
+                <goal>jetty:stop</goal>
+                <goal>jetty:run</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>debug</actionName>
+            <goals>
+                <goal>jetty:stop</goal>
+                <goal>jetty:run</goal>
+                
+            </goals>
+            <properties>
+                
+                <jpda.listen>maven</jpda.listen>
+                
+                <netbeans.deploy.debugmode>true</netbeans.deploy.debugmode>
+            </properties>
+        </action>
+        <action>
+            <actionName>test</actionName>
+            <goals>
+                <goal>test</goal>
+            </goals>
+            <activatedProfiles>
+                <activatedProfile>run</activatedProfile>
+            </activatedProfiles>
+        </action>
+        <action>
+            <actionName>profile</actionName>
+            <goals>
+                <goal>package</goal>
+            </goals>
+            <properties>
+                <netbeans.deploy>true</netbeans.deploy>
+                <netbeans.deploy.clientUrlPart>mvn tomcat:run</netbeans.deploy.clientUrlPart>
+                <netbeans.deploy.profilemode>true</netbeans.deploy.profilemode>
+            </properties>
+        </action>
+    </actions>

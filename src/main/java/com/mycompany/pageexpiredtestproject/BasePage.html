@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:wicket="http://wicket.apache.org">
+    <head>         
+        <!--        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>-->
+        <meta charset="UTF-8"/>     
+        <wicket:head>  
+            <wicket:link>                                        
+                <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/> 
+                <link href="css/styles.css" rel="stylesheet"/>  
+                <link href="companyresources/custom.css" rel="stylesheet"/>  
+            </wicket:link> 
+        </wicket:head>     
+    </head> 
+
+
+
+    <body>  
+        <div class="container-fluid"> 
+             <div id="cutstart"/>
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="header" wicket:id="headerpanel" />
+                    </div>
+                </div>      
+
+             <div id="cutend"></div>
+                <div class="row">
+                    <!--                <div class="col-md-3 col-lg-2">
+                                         <div  wicket:id="leftsidebar" class="leftsidebar"></div>           
+                                    </div>                -->
+                    <div id="contentarea" >
+                        <div class="col-md-12 col-lg-12">
+                            <wicket:child/>    
+                        </div>
+                    </div>
+
+                </div>      
+            </div>       
+
+<!--            <div class="row">
+                <div class="footer" wicket:id="footerpanel" />                                   
+            </div>-->
+
+
+        </div>
+
+
+
+
+
+    </body> 
+</html>
