@@ -22,7 +22,7 @@ public class SessionExpirationAwareAjaxSelfUpdatingBehaviour extends AjaxSelfUpd
     @Override
     protected void updateAjaxAttributes(AjaxRequestAttributes attributes) {
         attributes.getExtraParameters().put("extra","1");
-        super.updateAjaxAttributes(attributes); //To change body of generated methods, choose Tools | Templates.
+        super.updateAjaxAttributes(attributes); 
     }
     
 }

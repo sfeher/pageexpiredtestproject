@@ -67,27 +67,27 @@ public class WicketApplication extends AuthenticatedWebApplication {
 
     private void setListeners() {
         
-        getRequestCycleListeners().add(new AbstractRequestCycleListener() {
-
-            @Override
-            public void onEndRequest(RequestCycle cycle) {
-                HttpServletRequest req = ((ServletWebRequest) RequestCycle.get().getRequest()).getContainerRequest();
-                Integer st=req.getSession().getMaxInactiveInterval();
-                DateTime now=new DateTime();
-                
-                StringValue t = cycle.getRequest().getRequestParameters().getParameterValue("extra");
-                if (!t.isNull()) {                    
-                    if (TestSession.getSession().getTimeOut().isBefore(now)) {
-                        TestSession.getSession().invalidateNow();
-                    }
-                } else {                    
-                    TestSession.getSession().setTimeOut(now.plusSeconds(st));
-                }
-
-                super.onEndRequest(cycle); 
-            }
-
-        });
+//        getRequestCycleListeners().add(new AbstractRequestCycleListener() {
+//
+//            @Override
+//            public void onEndRequest(RequestCycle cycle) {
+//                HttpServletRequest req = ((ServletWebRequest) RequestCycle.get().getRequest()).getContainerRequest();
+//                Integer st=req.getSession().getMaxInactiveInterval();
+//                DateTime now=new DateTime();
+//                
+//                StringValue t = cycle.getRequest().getRequestParameters().getParameterValue("extra");
+//                if (!t.isNull()) {                    
+//                    if (TestSession.getSession().getTimeOut().isBefore(now)) {
+//                        TestSession.getSession().invalidateNow();
+//                    }
+//                } else {                    
+//                    TestSession.getSession().setTimeOut(now.plusSeconds(st));
+//                }
+//
+//                super.onEndRequest(cycle); 
+//            }
+//
+//        });
 
     }
 
